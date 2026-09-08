@@ -1,0 +1,250 @@
+{
+  "checked_at_utc": "2026-09-08T18:01:15.247429+00:00",
+  "environment": {
+    "browser": "Chromium 143.0.7499.4",
+    "mode": "local HTTP server in GitHub Actions",
+    "viewports": [
+      1200,
+      820,
+      390,
+      320
+    ],
+    "screenshots": 5
+  },
+  "summary": {
+    "PASS": 33
+  },
+  "tests": [
+    {
+      "id": "T01",
+      "test": "HTML5 structure and nesting",
+      "expected": "HTML5, metadata and balanced tags",
+      "actual": "Unclosed tags: 0; nesting errors: 0",
+      "status": "PASS"
+    },
+    {
+      "id": "T02",
+      "test": "Semantic structure",
+      "expected": "One h1; at least three sections; all landmarks",
+      "actual": "1 main heading; 5 sections",
+      "status": "PASS"
+    },
+    {
+      "id": "T03",
+      "test": "IDs and labels",
+      "expected": "Unique IDs and connected labels for every input",
+      "actual": "21 IDs; 9 explicitly labelled inputs",
+      "status": "PASS"
+    },
+    {
+      "id": "T04",
+      "test": "Lists",
+      "expected": "Ordered, unordered and correctly nested lists",
+      "actual": "3 nested lists inside parent list items",
+      "status": "PASS"
+    },
+    {
+      "id": "T05",
+      "test": "Schedule table",
+      "expected": "Caption, five headings and four consistent data rows",
+      "actual": "5 headings; 4 data rows",
+      "status": "PASS"
+    },
+    {
+      "id": "T06",
+      "test": "Local file references",
+      "expected": "All linked local resources exist",
+      "actual": "4 references; missing: []",
+      "status": "PASS"
+    },
+    {
+      "id": "T07",
+      "test": "CSS syntax",
+      "expected": "No CSS parser errors",
+      "actual": "241 declarations; 0 errors",
+      "status": "PASS"
+    },
+    {
+      "id": "T08",
+      "test": "Helper syntax",
+      "expected": "Node syntax check succeeds",
+      "actual": "Exit code 0",
+      "status": "PASS"
+    },
+    {
+      "id": "T09",
+      "test": "Rendered image and styling",
+      "expected": "Image loaded and CSS declarations supported",
+      "actual": "Image loaded: True; unsupported declarations: 0",
+      "status": "PASS"
+    },
+    {
+      "id": "T10",
+      "test": "Internal navigation",
+      "expected": "Every link reaches its target",
+      "actual": "8 links checked; 0 failures",
+      "status": "PASS"
+    },
+    {
+      "id": "T11",
+      "test": "External link attributes",
+      "expected": "HTTPS, new tab and safe relationship attributes",
+      "actual": "2 external links checked",
+      "status": "PASS"
+    },
+    {
+      "id": "T12",
+      "test": "Live external destination",
+      "expected": "HTML standard loads successfully",
+      "actual": "HTTP 200",
+      "status": "PASS"
+    },
+    {
+      "id": "T13",
+      "test": "Required fields",
+      "expected": "Empty form rejected and first required field focused",
+      "actual": "Valid: False; focus: fullname",
+      "status": "PASS"
+    },
+    {
+      "id": "T14",
+      "test": "Name minimum length",
+      "expected": "Two-character name rejected",
+      "actual": "tooShort: True",
+      "status": "PASS"
+    },
+    {
+      "id": "T15",
+      "test": "Student ID limits",
+      "expected": "Letters rejected; maximum fifteen digits",
+      "actual": "Letter mismatch: True; capped length: 15",
+      "status": "PASS"
+    },
+    {
+      "id": "T16",
+      "test": "Email validation",
+      "expected": "Malformed email rejected",
+      "actual": "typeMismatch: True",
+      "status": "PASS"
+    },
+    {
+      "id": "T17",
+      "test": "Date boundaries",
+      "expected": "Only 15 and 16 October accepted",
+      "actual": "14, 15, 16, 17 October valid: [False, True, True, False]",
+      "status": "PASS"
+    },
+    {
+      "id": "T18",
+      "test": "Radio group",
+      "expected": "Exactly one participation type selected",
+      "actual": "Exclusive: True",
+      "status": "PASS"
+    },
+    {
+      "id": "T19",
+      "test": "Checkbox choices",
+      "expected": "Two topics can be selected independently",
+      "actual": "Selected topics: 2",
+      "status": "PASS"
+    },
+    {
+      "id": "T20",
+      "test": "Valid demo submission",
+      "expected": "Local confirmation; no request or navigation",
+      "actual": "Confirmation: True; new requests: 0",
+      "status": "PASS"
+    },
+    {
+      "id": "T21",
+      "test": "Enter-key submission",
+      "expected": "Enter uses the same safe handler",
+      "actual": "Unchanged URL: True; new requests: 0",
+      "status": "PASS"
+    },
+    {
+      "id": "T22",
+      "test": "Reset button",
+      "expected": "All fields and selections return to defaults",
+      "actual": "All controls reset: True",
+      "status": "PASS"
+    },
+    {
+      "id": "T23",
+      "test": "Label interaction",
+      "expected": "Labels focus or toggle the corresponding input",
+      "actual": "Text focus: True; checkbox selected: True",
+      "status": "PASS"
+    },
+    {
+      "id": "T24",
+      "test": "Keyboard focus",
+      "expected": "Tab gives a visible three-pixel focus outline",
+      "actual": "3px solid",
+      "status": "PASS"
+    },
+    {
+      "id": "T25",
+      "test": "Responsive layout at 1200px",
+      "expected": "No horizontal document overflow",
+      "actual": "Document width: 1200px; viewport: 1200px",
+      "status": "PASS"
+    },
+    {
+      "id": "T26",
+      "test": "Responsive layout at 820px",
+      "expected": "No horizontal document overflow",
+      "actual": "Document width: 820px; viewport: 820px",
+      "status": "PASS"
+    },
+    {
+      "id": "T27",
+      "test": "Responsive layout at 390px",
+      "expected": "No horizontal document overflow",
+      "actual": "Document width: 390px; viewport: 390px",
+      "status": "PASS"
+    },
+    {
+      "id": "T28",
+      "test": "Responsive layout at 320px",
+      "expected": "No horizontal document overflow",
+      "actual": "Document width: 320px; viewport: 320px",
+      "status": "PASS"
+    },
+    {
+      "id": "T29",
+      "test": "Mobile table scrolling",
+      "expected": "Wide table scrolls inside its own region",
+      "actual": "Horizontal offset: 100px",
+      "status": "PASS"
+    },
+    {
+      "id": "T30",
+      "test": "Reduced motion",
+      "expected": "Reduced-motion preference disables smooth scrolling",
+      "actual": "scroll-behavior: auto",
+      "status": "PASS"
+    },
+    {
+      "id": "T31",
+      "test": "No-JavaScript safety",
+      "expected": "Submit disabled; Enter sends no information",
+      "actual": "Disabled: True; new requests: 0; unchanged URL: True",
+      "status": "PASS"
+    },
+    {
+      "id": "T32",
+      "test": "Console and page errors",
+      "expected": "No avoidable errors on the implemented page",
+      "actual": "Errors recorded: 0",
+      "status": "PASS"
+    },
+    {
+      "id": "T33",
+      "test": "Real resource loading",
+      "expected": "HTML, CSS, helper and SVG load through HTTP",
+      "actual": "All four resources returned HTTP 200: True",
+      "status": "PASS"
+    }
+  ]
+}

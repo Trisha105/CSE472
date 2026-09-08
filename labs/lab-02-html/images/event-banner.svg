@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">SEU TechConnect 2026 classroom event banner</title>
+  <desc id="desc">A laptop displaying code brackets, connected technology nodes, and the sample event date.</desc>
+  <rect width="800" height="500" fill="#102d46"/>
+  <circle cx="755" cy="30" r="190" fill="#16415b"/>
+  <circle cx="28" cy="510" r="170" fill="#16415b"/>
+  <g stroke="#3a8392" stroke-width="2" fill="none">
+    <path d="M64 283H132L174 241H236M560 251H646L694 204H746M564 329H656L691 364H750"/>
+    <circle cx="64" cy="283" r="8"/><circle cx="746" cy="204" r="8"/>
+    <circle cx="750" cy="364" r="8"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <text x="48" y="55" fill="#85d8d0" font-size="16" letter-spacing="3">SOUTHEAST UNIVERSITY / CSE 472</text>
+    <text x="48" y="112" fill="#ffffff" font-size="48" font-weight="700">TechConnect 2026</text>
+    <text x="50" y="149" fill="#cae1e9" font-size="20">Build. Share. Learn together.</text>
+  </g>
+  <rect x="227" y="201" width="346" height="204" rx="14" fill="#d5e9ef"/>
+  <rect x="241" y="215" width="318" height="172" rx="5" fill="#173d59"/>
+  <g stroke="#87e2d3" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M321 267L289 301L321 335M479 267L511 301L479 335M422 252L377 349"/>
+  </g>
+  <path d="M206 405H594L624 425H176Z" fill="#eff7fa"/>
+  <path d="M176 425H624L609 434H191Z" fill="#98bacb"/>
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+    <rect x="50" y="190" width="124" height="38" rx="19" fill="#22677b"/>
+    <text x="112" y="215" fill="#fff">WEB</text>
+    <rect x="630" y="263" width="124" height="38" rx="19" fill="#22677b"/>
+    <text x="692" y="288" fill="#fff">AI + DATA</text>
+    <rect x="50" y="331" width="137" height="38" rx="19" fill="#22677b"/>
+    <text x="118" y="356" fill="#fff">ROBOTICS</text>
+  </g>
+  <text x="400" y="475" text-anchor="middle" fill="#cae1e9" font-family="Arial, sans-serif" font-size="16">15-16 OCTOBER 2026 | CLASSROOM DEMONSTRATION</text>
+</svg>

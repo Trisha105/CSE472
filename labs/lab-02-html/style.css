@@ -1,7 +1,7 @@
 :root {
   --navy: #0f2a43;
   --blue: #155e9a;
-  --teal: #0f8b8d;
+  --teal: #0b7476;
   --sky: #eaf4fb;
   --mint: #e8f7f4;
   --ink: #1d2a36;
@@ -44,7 +44,8 @@ a:hover {
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible {
+input:focus-visible,
+.table-wrap:focus-visible {
   outline: 3px solid #ffbf47;
   outline-offset: 3px;
 }
@@ -487,5 +488,53 @@ button {
 
   button {
     width: 100%;
+  }
+}
+
+/* Small accessibility and safe-demo additions to the existing Lab 02 theme. */
+.skip-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  padding: 10px 16px;
+  background: var(--white);
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+#main-content,
+#contact {
+  scroll-margin-top: 84px;
+}
+
+.form-status {
+  min-height: 1.65em;
+  margin: 18px 0 0;
+  color: #205c4d;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.about-grid > div,
+.footer-inner > div,
+.field-group {
+  min-width: 0;
+}
+
+.site-footer p {
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

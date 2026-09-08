@@ -1,0 +1,9 @@
+{
+  "pdf_pages": 27,
+  "latex_passes": 3,
+  "layout_warnings": [],
+  "tests": {
+    "PASS": 33
+  },
+  "screenshots": 5
+}
