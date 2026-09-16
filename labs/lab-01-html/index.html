@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEU Tech Event Information and Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <p class="eyebrow">Southeast University - CSE 472</p>
+            <h1>SEU Tech Event 2026</h1>
+            <p class="tagline">Information and Registration Page</p>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#register">Register</a>
+    </nav>
+
+    <main class="page-shell">
+        <section id="about" class="panel">
+            <div class="two-column">
+                <div>
+                    <p class="section-label">Event overview</p>
+                    <h2>About the Event</h2>
+                    <p>SEU Tech Event 2026 is a student-focused technology event designed to bring together learners who are interested in modern web development, programming, problem solving, and collaborative project work.</p>
+                    <p>The <span class="highlight">main goal</span> is to help students learn from short technical sessions, practical demonstrations, and peer interaction while building confidence in using web technologies.</p>
+                    <div class="event-note"><strong>Participation:</strong> Students may attend the sessions, join practical activities, and register for a preferred event date using the form below.</div>
+                    <p>Visit the <a href="https://www.seu.edu.bd" target="_blank" rel="noopener noreferrer">Southeast University website</a> for university information.</p>
+                </div>
+                <figure class="event-figure">
+                    <img src="images/tech-event-banner.svg" alt="SEU Tech Event banner showing web development and technology themes">
+                    <figcaption>Event banner for the SEU Tech Event Information and Registration Page.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="highlights" class="panel">
+            <p class="section-label">What students will experience</p>
+            <h2>Event Highlights and Participation Plan</h2>
+            <div class="list-grid">
+                <div class="list-card">
+                    <h3>Event Highlights</h3>
+                    <ul>
+                        <li>Introductory sessions on HTML, CSS, and JavaScript</li>
+                        <li>Hands-on webpage building activities</li>
+                        <li>Team-based problem solving and idea sharing</li>
+                        <li>Short presentation and feedback session</li>
+                    </ul>
+                </div>
+                <div class="list-card">
+                    <h3>How to Participate</h3>
+                    <ol>
+                        <li>Read the event information and schedule.</li>
+                        <li>Select a suitable date and participation type.</li>
+                        <li>Complete the registration form.</li>
+                        <li>Attend the selected event session.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="nested-plan">
+                <h3>Technical Tracks</h3>
+                <ul>
+                    <li>Web Development Track
+                        <ol>
+                            <li>HTML page structure</li>
+                            <li>CSS styling and responsive layout</li>
+                            <li>Basic JavaScript interaction</li>
+                        </ol>
+                    </li>
+                    <li>Student Project Track
+                        <ul>
+                            <li>Idea presentation</li>
+                            <li>Team discussion</li>
+                            <li>Project feedback</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="schedule" class="panel">
+            <p class="section-label">Planned sessions</p>
+            <h2>Event Schedule</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Day</th><th>Time</th><th>Session</th><th>Venue</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Sunday</td><td>10:00 AM - 11:30 AM</td><td>HTML Fundamentals</td><td>CSE Lab 1</td></tr>
+                        <tr><td>Monday</td><td>11:30 AM - 1:00 PM</td><td>CSS Styling and Layout</td><td>CSE Lab 2</td></tr>
+                        <tr><td>Tuesday</td><td>10:00 AM - 11:30 AM</td><td>JavaScript Basics</td><td>CSE Lab 1</td></tr>
+                        <tr><td>Thursday</td><td>2:00 PM - 4:00 PM</td><td>Student Project Showcase</td><td>Seminar Hall</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="register" class="panel">
+            <p class="section-label">Complete your registration</p>
+            <h2>Registration Form</h2>
+            <p>Please provide the required information. Fields marked with an asterisk are compulsory.</p>
+            <form action="#" method="post">
+                <div class="form-grid">
+                    <div class="field"><label for="fullname">Full Name *</label><input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required></div>
+                    <div class="field"><label for="studentid">Student ID *</label><input type="number" id="studentid" name="studentid" placeholder="Enter your student ID" required></div>
+                    <div class="field"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="Enter your email" required></div>
+                    <div class="field"><label for="preferred-date">Preferred Date *</label><input type="date" id="preferred-date" name="preferred_date" required></div>
+                </div>
+                <fieldset>
+                    <legend>Participation Type</legend>
+                    <label class="choice" for="onsite"><input type="radio" id="onsite" name="participation" value="Onsite" required> Onsite</label>
+                    <label class="choice" for="online"><input type="radio" id="online" name="participation" value="Online"> Online</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Topics of Interest</legend>
+                    <label class="choice" for="interest-html"><input type="checkbox" id="interest-html" name="interest_html" value="HTML"> HTML</label>
+                    <label class="choice" for="interest-css"><input type="checkbox" id="interest-css" name="interest_css" value="CSS"> CSS</label>
+                    <label class="choice" for="interest-js"><input type="checkbox" id="interest-js" name="interest_js" value="JavaScript"> JavaScript</label>
+                </fieldset>
+                <button type="submit">Submit Registration</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>SEU Tech Event 2026</strong> - CSE 472 Web and Internet Programming Lab</p>
+        <p>Contact: cse.lab@seu.edu.bd</p>
+    </footer>
+</body>
+</html>
