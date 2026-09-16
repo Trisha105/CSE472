@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">SEU Tech Event 2026 Banner</title>
+  <desc id="desc">A blue technology banner with coding symbols, connected nodes, and event text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/><stop offset="0.58" stop-color="#1f5fae"/><stop offset="1" stop-color="#1d9fbf"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/><stop offset="1" stop-color="#ffffff" stop-opacity="0.07"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" rx="42" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="190" fill="#ffffff" opacity="0.05"/>
+  <circle cx="110" cy="620" r="220" fill="#ffffff" opacity="0.04"/>
+  <g stroke="#bfefff" stroke-width="3" opacity="0.55">
+    <line x1="760" y1="160" x2="960" y2="270"/><line x1="960" y1="270" x2="850" y2="470"/><line x1="850" y1="470" x2="1050" y2="520"/><line x1="760" y1="160" x2="680" y2="360"/><line x1="680" y1="360" x2="850" y2="470"/>
+  </g>
+  <g fill="#e6f8ff"><circle cx="760" cy="160" r="12"/><circle cx="960" cy="270" r="12"/><circle cx="850" cy="470" r="12"/><circle cx="1050" cy="520" r="12"/><circle cx="680" cy="360" r="12"/></g>
+  <rect x="95" y="105" width="560" height="490" rx="28" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.22"/>
+  <text x="145" y="190" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#d9ecff">SOUTHEAST UNIVERSITY</text>
+  <text x="145" y="295" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" fill="#ffffff">SEU TECH</text>
+  <text x="145" y="382" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" fill="#ffffff">EVENT 2026</text>
+  <text x="145" y="455" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#d9ecff">Learn. Build. Share.</text>
+  <rect x="145" y="500" width="360" height="58" rx="29" fill="#ffffff" opacity="0.95"/>
+  <text x="185" y="540" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#1f5fae">CSE 472 WEB LAB</text>
+  <g transform="translate(735 300)">
+    <rect x="0" y="0" width="360" height="230" rx="26" fill="#08182d" opacity="0.82" stroke="#bfefff" stroke-opacity="0.45"/>
+    <circle cx="36" cy="34" r="7" fill="#ff7a88"/><circle cx="62" cy="34" r="7" fill="#ffd166"/><circle cx="88" cy="34" r="7" fill="#68d391"/>
+    <text x="42" y="104" font-family="Consolas, monospace" font-size="38" font-weight="700" fill="#9de8ff">&lt;html&gt;</text>
+    <text x="76" y="158" font-family="Consolas, monospace" font-size="31" fill="#ffffff">build ideas</text>
+    <text x="42" y="205" font-family="Consolas, monospace" font-size="38" font-weight="700" fill="#9de8ff">&lt;/html&gt;</text>
+  </g>
+</svg>
