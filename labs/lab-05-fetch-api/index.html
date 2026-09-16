@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSE472 Lab 05 Student Workshop Registration System using Fetch and a simple public API.">
+  <title>Student Workshop Registration System | Lab 05</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <p class="eyebrow">CSE 472 | Web and Internet Programming Lab</p>
+      <h1>Student Workshop Registration System</h1>
+      <p class="lead">Project Stage 05: Loading data through requests and responses.</p>
+      <div class="hero-meta" aria-label="Event summary">
+        <span>15-16 October 2026</span>
+        <span>SEU CSE Department</span>
+        <span>HTTP, Fetch and Simple API Use</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a href="#about">About</a>
+      <a href="#interactions">Interactions</a>
+      <a href="#workshop-details">Fetch Data</a>
+      <a href="#public-api">Public API</a>
+      <a href="#register">Register</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="page-shell">
+    <section id="about" class="section-card about-grid">
+      <div>
+        <p class="section-kicker">Lab 05 overview</p>
+        <h2>About the Project</h2>
+        <p>This project keeps the Student Workshop Registration System from the earlier lab stages and adds browser-server communication with the Fetch API.</p>
+        <p>Workshop information is stored in a separate JSON file and appears only after the user clicks a button. A second button requests a sample user from JSONPlaceholder.</p>
+        <div class="info-box">
+          <h3>Request-Response Idea</h3>
+          <p><strong>GET:</strong> receives data from a resource.</p>
+          <p><strong>200:</strong> means the request was successful.</p>
+          <p><strong>404:</strong> means the requested resource was not found.</p>
+        </div>
+      </div>
+      <div class="mini-card">
+        <p class="section-kicker">Project Stage 05</p>
+        <h3>New Lab Features</h3>
+        <ul class="feature-list">
+          <li>Local JSON data requested with <code>fetch()</code>.</li>
+          <li><code>async</code> and <code>await</code> used for the response.</li>
+          <li><code>response.status === 200</code> checked before reading JSON.</li>
+          <li>Six JSON values displayed on the webpage.</li>
+          <li>One public API request using JSONPlaceholder.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="interactions" class="section-card">
+      <p class="section-kicker">Earlier JavaScript work</p>
+      <h2>Workshop Interactions</h2>
+      <div class="two-column">
+        <div class="mini-card">
+          <h3>Registration Status</h3>
+          <button type="button" class="primary-button" onclick="checkRegistration()">Check Registration Status</button>
+          <p id="registrationStatus" aria-live="polite">Click the button to check the status.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Seat Availability</h3>
+          <button type="button" class="primary-button" onclick="checkSeats()">Check Seat Availability</button>
+          <p id="seatMessage" aria-live="polite">Seat information will appear here.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <h3>Workshop Reminder</h3>
+        <button type="button" class="secondary-button" onclick="showWorkshopReminder()">Show Workshop Reminder</button>
+        <p id="workshopReminder" aria-live="polite">Click the button for a short reminder.</p>
+      </div>
+    </section>
+
+    <section id="workshop-details" class="section-card">
+      <p class="section-kicker">Local JSON request</p>
+      <h2>Workshop Details</h2>
+      <p>Click the button to load workshop information from <code>data/workshop.json</code>.</p>
+      <button type="button" class="primary-button" onclick="loadWorkshop()">Load Workshop Details</button>
+      <div class="mini-card" style="margin-top: 22px;">
+        <p><strong>Title:</strong> <span id="workshopTitle">Not loaded</span></p>
+        <p><strong>Date:</strong> <span id="workshopDate">Not loaded</span></p>
+        <p><strong>Venue:</strong> <span id="workshopVenue">Not loaded</span></p>
+        <p><strong>Seats:</strong> <span id="workshopSeats">Not loaded</span></p>
+        <p><strong>Instructor:</strong> <span id="workshopInstructor">Not loaded</span></p>
+        <p><strong>Duration:</strong> <span id="workshopDuration">Not loaded</span></p>
+        <p id="loadMessage" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="public-api" class="section-card">
+      <p class="section-kicker">External request</p>
+      <h2>Public API Practice</h2>
+      <p>JSONPlaceholder is used only for practice. The page displays the sample user's name and email.</p>
+      <button type="button" class="primary-button" onclick="loadSampleUser()">Load Sample User</button>
+      <p id="apiUser" aria-live="polite">No API data loaded yet.</p>
+    </section>
+
+    <section id="register" class="section-card registration-section">
+      <p class="section-kicker">Earlier form work</p>
+      <h2>Registration Form</h2>
+      <p>The earlier registration form remains in the project. Lab 05 does not implement POST or PHP.</p>
+      <form action="#register" method="get" onsubmit="return false;">
+        <div class="form-grid">
+          <div class="field-group">
+            <label for="studentName">Full Name</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter your full name" minlength="3" maxlength="60" required>
+            <button type="button" class="primary-button" onclick="showGreeting()">Show Greeting</button>
+            <p id="greetingMessage" aria-live="polite"></p>
+          </div>
+          <div class="field-group">
+            <label for="studentid">Student ID</label>
+            <input type="text" id="studentid" name="studentid" placeholder="Enter your student ID" minlength="10" maxlength="15" required>
+          </div>
+          <div class="field-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+          </div>
+          <div class="field-group">
+            <label for="preferred-date">Preferred Date</label>
+            <input type="date" id="preferred-date" name="preferred_date" min="2026-10-15" max="2026-10-16" required>
+          </div>
+        </div>
+        <fieldset>
+          <legend>Preferred Participation Type</legend>
+          <div class="choice-row">
+            <div class="choice-item"><input type="radio" id="attendee" name="participation_type" value="Attendee" required><label for="attendee">General Attendee</label></div>
+            <div class="choice-item"><input type="radio" id="presenter" name="participation_type" value="Presenter"><label for="presenter">Project Presenter</label></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Topics of Interest</legend>
+          <div class="choice-row">
+            <div class="choice-item"><input type="checkbox" id="topic-web" name="topics" value="Web Development"><label for="topic-web">Web Development</label></div>
+            <div class="choice-item"><input type="checkbox" id="topic-ai" name="topics" value="AI and Data"><label for="topic-ai">AI and Data</label></div>
+            <div class="choice-item"><input type="checkbox" id="topic-iot" name="topics" value="IoT and Robotics"><label for="topic-iot">IoT and Robotics</label></div>
+          </div>
+        </fieldset>
+        <div class="form-note"><strong>Note:</strong> Registration submission is not sent to a server in this laboratory.</div>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2>Contact Information</h2>
+        <p>Department of Computer Science and Engineering<br>Southeast University, Dhaka, Bangladesh</p>
+      </div>
+      <div class="footer-note">
+        <p><strong>CSE472 Lab Report 05</strong></p>
+        <p>Prepared by Jannatul Tuna Trisha</p>
+        <p>Student ID: 2023200000664 | Section: 01 | 9th Semester</p>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
