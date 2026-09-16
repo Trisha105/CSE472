@@ -1,0 +1,172 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=0.85in]{geometry}
+\usepackage{graphicx,float,booktabs,tabularx,array,enumitem,xcolor,hyperref,listings,fancyhdr,titlesec,setspace}
+
+\definecolor{SEUNavy}{HTML}{0B1F3A}
+\definecolor{SEUBlue}{HTML}{1F5FAE}
+\definecolor{CodeBG}{HTML}{F6F8FA}
+\hypersetup{colorlinks=true,linkcolor=SEUBlue,urlcolor=SEUBlue}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CSE 472 - Web and Internet Programming Lab}
+\rhead{Lab 01}
+\cfoot{\thepage}
+\titleformat{\section}{\Large\bfseries\color{SEUNavy}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries\color{SEUBlue}}{\thesubsection.}{0.6em}{}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\setstretch{1.08}
+\lstset{backgroundcolor=\color{CodeBG},basicstyle=\ttfamily\scriptsize,breaklines=true,frame=single,numbers=left,numberstyle=\tiny\color{gray},showstringspaces=false,tabsize=4}
+\graphicspath{{../screenshots/}}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{1cm}
+{\Large\bfseries SOUTHEAST UNIVERSITY\par}
+\vspace{0.25cm}
+{\large Department of Computer Science and Engineering\par}
+\vspace{1.3cm}
+\rule{0.86\textwidth}{1.2pt}
+\vspace{0.5cm}
+{\Huge\bfseries\color{SEUNavy} LAB REPORT\par}
+\vspace{0.4cm}
+{\LARGE\bfseries Lab Report on HTML Fundamentals and Structured Webpage Development\par}
+\vspace{0.3cm}
+{\Large SEU Tech Event Information and Registration Page\par}
+\vspace{0.5cm}
+\rule{0.86\textwidth}{1.2pt}
+\vspace{1.4cm}
+\begin{tabular}{>{\bfseries}p{4.2cm} p{8cm}}
+Course Code: & CSE 472 \\
+Course Title: & Web and Internet Programming Lab \\
+Student Name: & Jannatul Tuna Trisha \\
+Student ID: & 2023200000664 \\
+Section: & 01 \\
+Semester: & 9th \\
+Instructor: & Abid Ahmad \\
+Submission Date: & 17 September 2026 \\
+\end{tabular}
+\vfill
+{\large Individual Laboratory Submission\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Objective}
+The objective of this lab was to understand the basic structure of an HTML5 document and use common HTML elements to build a complete single-page website. The work focused on headings, paragraphs, links, images, lists, tables, forms, and semantic layout elements. The lab also required clean code organization, browser testing, and a report explaining the implementation and final result.
+
+\section{Software and Tools Used}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{3.8cm}X}
+\toprule
+Tool & Purpose \\
+\midrule
+Visual Studio Code / Text Editor & Writing and editing HTML and CSS. \\
+Google Chrome / Chromium & Running and checking the webpage. \\
+HTML5 & Creating webpage structure and content. \\
+CSS3 & Improving layout, colors, table appearance, form layout, and responsiveness. \\
+Local SVG image & Displaying the event banner with alternative text. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Short Theory}
+HTML stands for HyperText Markup Language. It is used to describe the structure of content on a webpage. A browser reads HTML elements and renders headings, paragraphs, links, images, lists, tables, forms, and other page components.
+
+A standard HTML5 document starts with \texttt{<!DOCTYPE html>} and contains \texttt{html}, \texttt{head}, and \texttt{body}. The \texttt{head} section stores metadata, the title, responsive viewport settings, and links to resources such as CSS. The \texttt{body} contains visible content.
+
+Semantic tags such as \texttt{header}, \texttt{nav}, \texttt{main}, \texttt{section}, and \texttt{footer} make the page structure easier to understand. Lists organize related items, tables present data in rows and columns, and forms collect user input. Labels are connected to form controls through matching \texttt{for} and \texttt{id} attributes.
+
+\section{Working Steps}
+\begin{enumerate}[leftmargin=1.5em]
+\item Created a separate Lab 01 project folder.
+\item Created \texttt{index.html} with the HTML5 doctype, metadata, title, viewport, linked stylesheet, and body.
+\item Added \texttt{header}, \texttt{nav}, \texttt{main}, four \texttt{section} elements, and \texttt{footer}.
+\item Added the event description using headings, paragraphs, \texttt{div}, and \texttt{span}.
+\item Added a working external hyperlink and a local image with descriptive \texttt{alt} text.
+\item Added unordered, ordered, and nested lists.
+\item Created a schedule table with one header row and four data rows.
+\item Created a registration form with full name, student ID, email, preferred date, radio buttons, checkboxes, and a submit button.
+\item Added \texttt{style.css} for a clean and responsive layout.
+\item Opened the page in a browser and checked navigation, image path, lists, table, form controls, and final layout.
+\end{enumerate}
+
+\section{Final Source Code}
+\subsection{HTML File: index.html}
+\lstinputlisting[language=HTML]{../index.html}
+
+\subsection{CSS File: style.css}
+\lstinputlisting{../style.css}
+
+\section{Explanation of Important Tags Used}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\textwidth}{>{\ttfamily\bfseries}p{3cm}X}
+\toprule
+Tag & Purpose \\
+\midrule
+<!DOCTYPE html> & Declares the HTML5 document type. \\
+<html> & Root element of the document. \\
+<head> & Contains metadata, page title, and CSS link. \\
+<meta> & Defines character encoding and responsive viewport. \\
+<title> & Sets the browser-tab title. \\
+<link> & Connects the external stylesheet. \\
+<header> & Contains the event title and introduction. \\
+<nav> & Contains internal navigation links. \\
+<main> & Wraps the main page content. \\
+<section> & Separates About, Highlights, Schedule, and Registration content. \\
+<div> & Groups related block-level content. \\
+<span> & Marks a small inline part of text. \\
+<a> & Creates internal and external hyperlinks. \\
+<img> & Displays the local event banner with alternative text. \\
+<ul>, <ol>, <li> & Create unordered, ordered, and nested lists. \\
+<table>, <tr>, <th>, <td> & Build the schedule table. \\
+<form> & Contains the registration controls. \\
+<label> & Describes and connects to an input field. \\
+<input> & Collects text, number, email, date, radio, and checkbox values. \\
+<button> & Creates the form submit button. \\
+<footer> & Contains closing course and contact information. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Output Screenshots}
+The final submission package includes two browser screenshots: one showing the top portion of the completed page and another showing the registration form section.
+
+\IfFileExists{../screenshots/output-top.png}{
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{output-top.png}\caption{Top portion of the final webpage.}\end{figure}
+}{\begin{center}\fbox{\parbox{0.85\textwidth}{Output screenshot file: \texttt{screenshots/output-top.png}}}\end{center}}
+
+\IfFileExists{../screenshots/output-register.png}{
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{output-register.png}\caption{Registration form section of the final webpage.}\end{figure}
+}{\begin{center}\fbox{\parbox{0.85\textwidth}{Output screenshot file: \texttt{screenshots/output-register.png}}}\end{center}}
+
+\section{Problems Faced and Solutions}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{4.2cm}X}
+\toprule
+Problem & Solution \\
+\midrule
+Image path & Stored the image in the \texttt{images} folder and used a correct relative path. \\
+Table width on small screens & Put the table in an overflow wrapper to keep it usable on narrow displays. \\
+Form organization & Grouped fields clearly and connected labels to matching input IDs. \\
+Page organization & Used semantic tags and consistent indentation. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Conclusion}
+This lab helped me understand how the main HTML elements work together to create a complete webpage. I practiced HTML5 document structure, semantic layout, links, images, lists, tables, and form controls. I also learned the importance of correct file paths, alternative text, label-input connections, clean indentation, and browser testing. The final SEU Tech Event webpage satisfies the required single-page website and registration features for the assignment.
+
+\end{document}
