@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS cse472_lab05;
+USE cse472_lab05;
+
+CREATE TABLE IF NOT EXISTS registrations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    student_id VARCHAR(30) NOT NULL,
+    email VARCHAR(120) NOT NULL,
+    department VARCHAR(50) NOT NULL,
+    workshop VARCHAR(80) NOT NULL,
+    expectation TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
